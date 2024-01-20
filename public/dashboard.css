@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Set background color */
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-nav {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    min-width: 20%; /* Set width to 25% of the screen */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-email {
+    color: #555; /* Set email color to #555 */
+    margin-top: 0px; /* Reduced margin-top */
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-nav li {
+    margin-bottom: 15px; /* Increased spacing between menu items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #999; /* Set default text color */
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.nav-item.active a {
+    color: #fff; /* Set text color for active item */
+}
+
+.dashboard-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    margin-left: 25%; /* Set margin-left to the width of the sidebar */
+}
+
+.content-left {
+    flex-grow: 1;
+}
+
+.content-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 25%; /* Same width as the navigation bar */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+.dashboard-content h2 {
+    color: #333;
+}
+.expense-category {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 30%;
+}
+
+.expense-category h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.progress-container {
+    width: 80%;
+    margin-top: 15px;
+}
+
+/* Add the following styles for the sliders */
+.slider {
+    width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none; /* Hide the default thumb appearance */
+    width: 0; /* Set thumb width to 0 to hide it */
+    height: 0; /* Set thumb height to 0 to hide it */
+}
+
+
+.progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 0;
+    margin-top: 5px;
+}
+/* ... (previous code) ... */
+.expense-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center; /* Center the form content */
+}
+
+.show-form-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-form-button:hover {
+    background-color: #333;
+}
+
+.expense-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-form label {
+    margin-top: 10px;
+}
+
+.expense-form h2{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.expense-form select,
+.expense-form input,
+.expense-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.expense-form textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.expense-form button {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.expense-form button:hover {
+    background-color: #333;
+}
+/* ... (remaining code) ... */

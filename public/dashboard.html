@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-d6EnVViCk0nG9Ckgv6xD7i/hZNkjHeR/1kg1b/Jqg9AZHlh95yR0eWIxtik9waD80zK9wx9wEetxgLbBTR1v5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="nav-header">
+                <img src="./images/logo.png" alt="Company Logo" class="logo">
+                <div class="user-info">
+                    <h1 id="clientName">Money Trail</h1>
+                    <p class="user-email" id="clientEmail">info@money-trail.com</p>
+                </div>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="summary.html"><i class="fas fa-chart-pie"></i> Summary</a></li>
+                <li class="nav-item"><a href="#"><i class="fas fa-cogs"></i>Logout</a></li>
+            </ul>
+        </nav>
+        <div class="dashboard-content">
+            <div class="content-left">
+                <h1>Welcome</h1>
+                <h4>Fundly expense tracker</h4>
+
+
+                <div class="expense-category">
+                    <h3>Food and Drinks</h3>
+                    <div class="progress-container">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="foodAndDrinksSlider">
+                        <div class="progress-bar" id="foodAndDrinksProgressBar"></div>
+                    </div>
+                </div>
+
+                <div class="expense-category">
+                    <h3>Shopping</h3>
+                    <div class="progress-container">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="shoppingSlider">
+                        <div class="progress-bar" id="shoppingProgressBar"></div>
+                    </div>
+                </div>
+
+                <div class="expense-category">
+                    <h3>Transportation</h3>
+                    <div class="progress-container">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="transportationSlider">
+                        <div class="progress-bar" id="transportationProgressBar"></div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="content-right">
+                <img src="./images/expense tracker.jpg" alt="expense animation">
+                <h3>Get Our Mobile Apps now</h3>
+                <a href="#"><img width="60%" src="./images/apps.png" alt="get apps on apple store or play store"></a>
+                
+                <div class="expense-form">
+                    <h2>New Expense</h2>
+                
+                    <form id="expenseForm" class="hidden-form">
+                        <label for="expenseCategory">Category:</label>
+                        <select id="expenseCategory" name="expenseCategory">
+                            <option value="Food and Drinks">Food and Drinks</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Transportation">Transportation</option>
+                            
+                        </select>
+            
+                        <label for="expenseAmount">Amount Spent:</label>
+                        <input type="number" id="expenseAmount" name="expenseAmount" placeholder="Enter amount" required>
+            
+                        <label for="expenseNote">Optional Note:</label>
+                        <textarea id="expenseNote" name="expenseNote" rows="4" placeholder="Enter optional note"></textarea>
+            
+                        <button type="button" onclick="addExpense()">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

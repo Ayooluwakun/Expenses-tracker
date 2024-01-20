@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spending Summary</title>
+    <link rel="stylesheet" href="summary.css">
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="nav-header">
+                <img src="./images/logo.png" alt="Company Logo" class="logo">
+                <div class="user-info">
+                    <h1 id="clientName">Money Trail</h1>
+                    <p class="user-email" id="clientEmail">info@money-trail.com</p>
+                </div>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="nav-item active"><a href="summary.html"><i class="fas fa-chart-pie"></i>Summary</a></li>
+                <li class="nav-item active"><a href="#"><i class="fas fa-chart-pie"></i>Logout</a></li>
+
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+        <div class="dashboard-content">
+            <h1>Spending Summary</h1>
+            <br>
+            <br>
+            <!-- Create a canvas element for the pie chart -->
+            <canvas id="pieChart" width="400" height="400"></canvas>
+
+            <script>
+                // Sample data (replace this with actual data from your expenses)
+                const data = {
+                    labels: ["Food and Drinks", "Shopping", "Transportation"],
+                    datasets: [{
+                        data: [200, 150, 100], // Sample amounts for each category
+                        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"], // Sample colors for each category
+                    }]
+                };
+
+                // Get the canvas element
+                const ctx = document.getElementById('pieChart').getContext('2d');
+
+                // Create a pie chart
+                const myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: data,
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

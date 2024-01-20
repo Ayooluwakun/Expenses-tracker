@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style for the container of the track bar */
+    .track-container {
+      width: 300px;
+      height: 20px;
+      background-color: #ccc;
+      position: relative;
+      border-radius: 10px; /* Rounded borders */
+      overflow: hidden;
+    }
+
+    /* Style for the progress indicator */
+    .progress-indicator {
+      height: 100%;
+      background-color: #4CAF50; /* Green color for progress */
+      width: 0; /* Initially, set width to 0% */
+      border-radius: 10px; /* Rounded borders */
+    }
+
+    /* Style for the input field */
+    .input-container {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <label for="progressInput">Enter Progress (0-100): </label>
+  <input type="number" id="progressInput" min="0" max="100" value="0" />
+  <button onclick="updateProgress()">Update</button>
+</div>
+
+<div class="track-container">
+  <div class="progress-indicator" id="progress"></div>
+</div>
+
+<script>
+  // JavaScript to update the progress based on user input
+  const progressIndicator = document.getElementById('progress');
+  const progressInput = document.getElementById('progressInput');
+
+  function updateProgress() {
+    const value = parseInt(progressInput.value, 10);
+    if (isNaN(value) || value < 0 || value > 100) {
+      alert('Please enter a valid number between 0 and 100.');
+      return;
+    }
+
+    // Update the progress indicator
+    progressIndicator.style.width = value + '%';
+  }
+</script>
+
+</body>
+</html>

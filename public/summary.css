@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-nav {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    min-width: 20%; /* Set width to 25% of the screen */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-email {
+    color: #555; /* Set email color to #555 */
+    margin-top: 0px; /* Reduced margin-top */
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-nav li {
+    margin-bottom: 15px; /* Increased spacing between menu items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #999; /* Set default text color */
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.nav-item.active a {
+    color: #fff; /* Set text color for active item */
+}
+
+.dashboard-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    margin-left: 25%; /* Set margin-left to the width of the sidebar */
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px; /* Set your desired maximum width */
+    max-height: 400px; /* Set your desired maximum height */
+}
